@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Andi Ila Noel - Dating Website</title>
+
+    <style>
+        /* General page styling */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #fff0f5;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #ff4f81, #ff758c);
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 40px;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            font-size: 18px;
+        }
+
+        /* Navigation bar */
+        nav {
+            background-color: #333;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        nav a:hover {
+            color: #ff6b91;
+        }
+
+        /* Hero section */
+        .hero {
+            text-align: center;
+            padding: 70px 20px;
+            background: linear-gradient(
+                rgba(255, 182, 193, 0.7),
+                rgba(255, 228, 225, 0.8)
+            );
+        }
+
+        .hero h2 {
+            font-size: 36px;
+            color: #d6336c;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 25px;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #e91e63;
+            color: white;
+            padding: 14px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .button:hover {
+            background-color: #ad1457;
+        }
+
+        /* Three columns */
+        .columns {
+            display: flex;
+            gap: 25px;
+            padding: 40px;
+            justify-content: center;
+        }
+
+        .card {
+            background-color: white;
+            width: 30%;
+            padding: 30px;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+        }
+
+        .card h3 {
+            color: #e91e63;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            line-height: 1.6;
+        }
+
+        /* Profiles section */
+        .profiles {
+            background-color: #ffe4ec;
+            padding: 50px 30px;
+            text-align: center;
+        }
+
+        .profiles h2 {
+            color: #d6336c;
+            margin-bottom: 30px;
+        }
+
+        .profile-container {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .profile {
+            background-color: white;
+            width: 250px;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .profile .avatar {
+            width: 100px;
+            height: 100px;
+            margin: auto;
+            border-radius: 50%;
+            background-color: #ffb6c1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 40px;
+        }
+
+        .profile h3 {
+            margin: 15px 0 8px;
+            color: #d6336c;
+        }
+
+        /* Registration section */
+        .signup {
+            padding: 50px 20px;
+            text-align: center;
+            background-color: #fff;
+        }
+
+        .signup h2 {
+            color: #d6336c;
+            margin-bottom: 20px;
+        }
+
+        form {
+            max-width: 450px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        input, select {
+            padding: 13px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 14px;
+            background-color: #e91e63;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-size: 17px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #ad1457;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        /* Mobile responsive design */
+        @media (max-width: 768px) {
+            .columns {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .card {
+                width: 90%;
+            }
+
+            nav {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+
+            header h1 {
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>💗 Andi Ila Noel</h1>
+        <p>Find Your Connection. Start Your Story.</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#profiles">Profiles</a>
+        <a href="#about">About</a>
+        <a href="#signup">Sign Up</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <h2>Welcome to Andi Ila Noel 💕</h2>
+
+        <p>
+            A place to meet new people, make meaningful connections,
+            and discover someone special.
+        </p>
+
+        <a href="#signup" class="button">Find Your Match</a>
+    </section>
+
+    <!-- Three Columns -->
+    <section class="columns" id="about">
+
+        <div class="card">
+            <h3>💖 Meaningful Connections</h3>
+            <p>
+                Meet people who share your interests and values
+                and build genuine connections.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>🔍 Discover People</h3>
+            <p>
+                Explore different profiles and discover people
+                who could be a great match for you.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>🔒 Privacy First</h3>
+            <p>
+                Your personal information should be respected.
+                Always communicate safely and responsibly.
+            </p>
+        </div>
+
+    </section>
+
+    <!-- Profiles -->
+    <section class="profiles" id="profiles">
+
+        <h2>Featured Profiles</h2>
+
+        <div class="profile-container">
+
+            <div class="profile">
+                <div class="avatar">👩</div>
+                <h3>Anu, 22</h3>
+                <p>📍 Kochi</p>
+                <p>🎵 Music • Travel • Movies</p>
+            </div>
+
+            <div class="profile">
+                <div class="avatar">👨</div>
+                <h3>Rahul, 24</h3>
+                <p>📍 Kerala</p>
+                <p>⚽ Sports • Photography • Travel</p>
+            </div>
+
+            <div class="profile">
+                <div class="avatar">👩</div>
+                <h3>Meera, 23</h3>
+                <p>📍 Ernakulam</p>
+                <p>📚 Books • Art • Music</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Sign Up -->
+    <section class="signup" id="signup">
+
+        <h2>Join Andi Ila Noel 💕</h2>
+
+        <form>
+
+            <input
+                type="text"
+                placeholder="Enter your name"
+                required
+            >
+
+            <input
+                type="email"
+                placeholder="Enter your email"
+                required
+            >
+
+            <input
+                type="number"
+                placeholder="Enter your age"
+                min="18"
+                required
+            >
+
+            <select required>
+                <option value="">Select your interest</option>
+                <option>Men</option>
+                <option>Women</option>
+                <option>Everyone</option>
+            </select>
+
+            <button type="submit">
+                Create Profile 💗
+            </button>
+
+        </form>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Andi Ila Noel | Find connections, create memories.</p>
+    </footer>
+
+</body>
+</html>
